@@ -4,6 +4,7 @@ Portainer Docker Compose Files
 
 Following is the command to start portainer in Swarm mode as a service. 
 
+```
 $ docker volume create portainer_data
 
 $ docker service create \
@@ -15,3 +16,4 @@ $ docker service create \
 --mount type=volume,src=portainer_data,dst=/data \
 portainer/portainer \
 -H unix:///var/run/docker.sock
+```
